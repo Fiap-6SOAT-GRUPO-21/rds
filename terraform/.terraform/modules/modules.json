@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"eks_cluster","Source":"./modules/eks","Dir":"modules/eks"},{"Key":"rds","Source":"./modules/rds","Dir":"modules/rds"},{"Key":"vpc_for_eks","Source":"./modules/vpc","Dir":"modules/vpc"}]}
