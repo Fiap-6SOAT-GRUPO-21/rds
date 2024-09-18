@@ -4,6 +4,12 @@ variable "region" {
   type        = string
 }
 
+variable "terraform_s3_key" {
+  description = "S3 key for terraform state"
+  default     = "rds/terraform/terraform.tfstate"
+  type        = string
+}
+
 variable "availability_zones" {
   type        = list(string)
   default     = ["us-east-1a", "us-east-1b"]
