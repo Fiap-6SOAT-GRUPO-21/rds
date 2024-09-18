@@ -10,6 +10,8 @@ As seguintes tarefas são realizadas por esse código Terradorm:
 
 * Através do módulo rds: Provisionamento da instância de database RDS postgres que será usado pela aplicação, apontando para a subnet prublica para permitir acesso externo (Apenas para fins de teste)
 
+## Este repositório NÃO contém pipeline de destroy, pipe de destroy está no repositório de infraestrutura.
+
 ## Fazendo Deployment via ACTION
 
 O action 'terraform apply' pode ser usado para realizar o deployment do RDS.
