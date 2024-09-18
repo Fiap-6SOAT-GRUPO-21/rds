@@ -21,12 +21,22 @@ aws eks --region us-east-1 update-kubeconfig --name techchallenge
 ```
 ### Lembre-se de executar a pipe 'terraform destroy' ao final dos testes
 
-## Testando na máquina local
+## Testando na máquina local aponta para o ambiente AWS Academy
 
-1. Execute antes o terraform apply do módulo 'eks' para provisionar o cluster EKS
-2. Execute o seguinte comando para configurar as credenciais do cluster EKS na sua máquina e poder executar comandos com kubectl
+1. Inicialize o laboratório no AWS Academy
+2. Copie as credenciais disponíveis em AWS Details (ver AWS CLI em CLoud Access) para o arquivo ~/.aws/credentials da sua máquina
+3. Comente o blco  do s3 backend no arquivo provider.tf
+5. Execute 'terraform init':
 ```bash
-aws eks --region us-east-1 update-kubeconfig --name techchallenge
+terraform init
+```
+6. Execute 'terraform apply' para subir a infraestrutura:
+```bash
+  terraform apply
+```
+7. Execute o seguinte comando de deploy da aplicação:
+```bash
+  terraform destroy
 ```
 
 ### Lembre-se de executar 'terraform destroy' ao final dos testes
