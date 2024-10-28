@@ -10,7 +10,7 @@ variable "availability_zones" {
   description = "List of availability zones for the selected region"
 }
 
-variable "database_credentials" {
+variable "api_food_database_credentials" {
   description = "Credentials for database creation"
 
   type = object({
@@ -25,5 +25,23 @@ variable "database_credentials" {
     password = "postgres"
     port     = 5432
     name     = "apifood"
+  }
+}
+
+variable "api_order_database_credentials" {
+  description = "Credentials for database creation"
+
+  type = object({
+    username = string
+    password = string
+    port     = string
+    name     = string
+  })
+
+  default = {
+    username = "postgres"
+    password = "postgres"
+    port     = 5432
+    name     = "apiorder"
   }
 }
