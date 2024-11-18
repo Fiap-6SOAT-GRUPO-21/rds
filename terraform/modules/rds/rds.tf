@@ -1,10 +1,10 @@
 resource "aws_db_subnet_group" "rds_subnet_group" {
-  name       = "rds_subnet_group"
+  name       = "rds_subnet_group-${var.database_name}"
   subnet_ids = var.database_subnetids
 }
 
 resource "aws_security_group" "rds_security_group" {
-  name        = "rds-security-group"
+  name        = "rds-security-group-${var.database_name}"
   vpc_id      = var.vpc_id
   description = "Allow all inbound for Postgress"
 
@@ -27,7 +27,7 @@ resource "aws_db_parameter_group" "postgres15_parameter_group" {
 }
 
 resource "aws_db_instance" "rds" {
-  identifier                 = "techchallenge-rds-15"
+  identifier                 = "techchallenge-rds-${var.database_name}"
   db_name                    = var.database_name
   instance_class             = "db.t4g.micro"
   allocated_storage          = 20
