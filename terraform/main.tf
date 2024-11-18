@@ -19,31 +19,31 @@ module "api_food_rds" {
   database_name      = var.api_food_database_credentials.name
 }
 
-resource "aws_ssm_parameter" "rds_db_url" {
+resource "aws_ssm_parameter" "rds_food_db_url" {
   name  = "/techchallenge/api_food/rds/db_url"
   type  = "String"
   value = module.api_food_rds.rds_endpoint
 }
 
-resource "aws_ssm_parameter" "rds_db_username" {
+resource "aws_ssm_parameter" "rds_food_db_username" {
   name  = "/techchallenge/api_food/rds/db_username"
   type  = "String"
   value = var.api_food_database_credentials.username
 }
 
-resource "aws_ssm_parameter" "rds_db_password" {
+resource "aws_ssm_parameter" "rds_food_db_password" {
   name  = "/techchallenge/api_food/rds/db_password"
   type  = "SecureString"
   value = var.api_food_database_credentials.password
 }
 
-resource "aws_ssm_parameter" "rds_db_port" {
+resource "aws_ssm_parameter" "rds_food_db_port" {
   name  = "/techchallenge/api_food/rds/db_port"
   type  = "String"
   value = var.api_food_database_credentials.port
 }
 
-resource "aws_ssm_parameter" "rds_db_name" {
+resource "aws_ssm_parameter" "rds_food_db_name" {
   name  = "/techchallenge/api_food/rds/db_name"
   type  = "String"
   value = var.api_food_database_credentials.name
@@ -63,31 +63,31 @@ module "api_order_rds" {
   database_name      = var.api_order_database_credentials.name
 }
 
-resource "aws_ssm_parameter" "rds_db_url" {
+resource "aws_ssm_parameter" "rds_order_db_url" {
   name  = "/techchallenge/api_order/rds/db_url"
   type  = "String"
   value = module.api_order_rds.rds_endpoint
 }
 
-resource "aws_ssm_parameter" "rds_db_username" {
+resource "aws_ssm_parameter" "rds_order_db_username" {
   name  = "/techchallenge/api_order/rds/db_username"
   type  = "String"
   value = var.api_order_database_credentials.username
 }
 
-resource "aws_ssm_parameter" "rds_db_password" {
+resource "aws_ssm_parameter" "rds_order_db_password" {
   name  = "/techchallenge/api_order/rds/db_password"
   type  = "SecureString"
   value = var.api_order_database_credentials.password
 }
 
-resource "aws_ssm_parameter" "rds_db_port" {
+resource "aws_ssm_parameter" "rds_order_db_port" {
   name  = "/techchallenge/api_order/rds/db_port"
   type  = "String"
   value = var.api_order_database_credentials.port
 }
 
-resource "aws_ssm_parameter" "rds_db_name" {
+resource "aws_ssm_parameter" "rds_order_db_name" {
   name  = "/techchallenge/api_order/rds/db_name"
   type  = "String"
   value = var.api_order_database_credentials.name
@@ -107,31 +107,31 @@ module "api_payments_rds" {
   database_name      = var.api_payments_database_credentials.name
 }
 
-resource "aws_ssm_parameter" "rds_db_url" {
+resource "aws_ssm_parameter" "rds_payments_db_url" {
   name  = "/techchallenge/api_payments/rds/db_url"
   type  = "String"
   value = module.api_payments_rds.rds_endpoint
 }
 
-resource "aws_ssm_parameter" "rds_db_username" {
+resource "aws_ssm_parameter" "rds_payments_db_username" {
   name  = "/techchallenge/api_payments/rds/db_username"
   type  = "String"
   value = var.api_payments_database_credentials.username
 }
 
-resource "aws_ssm_parameter" "rds_db_password" {
+resource "aws_ssm_parameter" "rds_payments_db_password" {
   name  = "/techchallenge/api_payments/rds/db_password"
   type  = "SecureString"
   value = var.api_payments_database_credentials.password
 }
 
-resource "aws_ssm_parameter" "rds_db_port" {
+resource "aws_ssm_parameter" "rds_payments_db_port" {
   name  = "/techchallenge/api_payments/rds/db_port"
   type  = "String"
   value = var.api_payments_database_credentials.port
 }
 
-resource "aws_ssm_parameter" "rds_db_name" {
+resource "aws_ssm_parameter" "rds_payments_db_name" {
   name  = "/techchallenge/api_payments/rds/db_name"
   type  = "String"
   value = var.api_payments_database_credentials.name
