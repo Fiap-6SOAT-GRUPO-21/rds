@@ -60,6 +60,6 @@ variable "api_payments_database_credentials" {
     username = "postgres"
     password = "postgres"
     port     = 5432
-    name     = "apiorder"
+    name     = "apipayments"
   }
 }
