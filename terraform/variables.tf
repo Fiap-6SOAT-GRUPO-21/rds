@@ -45,3 +45,21 @@ variable "api_order_database_credentials" {
     name     = "apiorder"
   }
 }
+
+variable "api_payments_database_credentials" {
+  description = "Credentials for database creation"
+
+  type = object({
+    username = string
+    password = string
+    port     = string
+    name     = string
+  })
+
+  default = {
+    username = "postgres"
+    password = "postgres"
+    port     = 5432
+    name     = "apiorder"
+  }
+}
