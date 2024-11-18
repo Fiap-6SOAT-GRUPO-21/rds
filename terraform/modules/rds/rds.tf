@@ -17,7 +17,7 @@ resource "aws_security_group" "rds_security_group" {
 }
 
 resource "aws_db_parameter_group" "postgres15_parameter_group" {
-  name   = "postgres15-param-group"
+  name   = "postgres15-param-group-${var.database_name}"
   family = "postgres15"
 
   parameter {
