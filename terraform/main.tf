@@ -107,39 +107,26 @@ module "api_payments_atlas" {
   database_name     = var.api_payments_database_credentials.database_name
 }
 
-# resource "aws_ssm_parameter" "mongodb_connection_string" {
-#   name  = "/techchallenge/api_payments/atlas/mongodb_connection_string"
-#   type  = "String"
-#   value = module.api_payments_atlas.mongodb_connection_string
-# }
-#
-# resource "aws_ssm_parameter" "mongodb_cluster_host" {
-#   name  = "/techchallenge/api_payments/atlas/mongodb_cluster_host"
-#   type  = "String"
-#   value = module.api_payments_atlas.mongodb_cluster_host
-# }
-#
-#
-# resource "aws_ssm_parameter" "atlas_payments_username" {
-#   name  = "/techchallenge/api_payments/atlas/db_username"
-#   type  = "String"
-#   value = var.api_payments_database_credentials.username
-# }
-#
-# resource "aws_ssm_parameter" "atlas_payments_password" {
-#   name  = "/techchallenge/api_payments/atlas/db_password"
-#   type  = "SecureString"
-#   value = var.api_payments_database_credentials.password
-# }
-#
-# resource "aws_ssm_parameter" "atlas_payments_port" {
-#   name  = "/techchallenge/api_payments/atlas/db_port"
-#   type  = "String"
-#   value = var.api_payments_database_credentials.port
-# }
-#
-# resource "aws_ssm_parameter" "atlas_payments_name" {
-#   name  = "/techchallenge/api_payments/atlas/db_name"
-#   type  = "String"
-#   value = var.api_payments_database_credentials.name
-# }
+resource "aws_ssm_parameter" "atlas_cluster_name" {
+  name  = "/techchallenge/api_payments/atlas/cluster_name"
+  type  = "String"
+  value = module.api_payments_atlas.mongodb_connection_string
+}
+
+resource "aws_ssm_parameter" "atlas_payments_username" {
+  name  = "/techchallenge/api_payments/atlas/db_username"
+  type  = "String"
+  value = var.api_payments_database_credentials.username
+}
+
+resource "aws_ssm_parameter" "atlas_payments_password" {
+  name  = "/techchallenge/api_payments/atlas/db_password"
+  type  = "SecureString"
+  value = var.api_payments_database_credentials.password
+}
+
+resource "aws_ssm_parameter" "atlas_payments_name" {
+  name  = "/techchallenge/api_payments/atlas/db_name"
+  type  = "String"
+  value = var.api_payments_database_credentials.database_name
+}
