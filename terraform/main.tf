@@ -8,15 +8,15 @@ data "aws_ssm_parameter" "public_subnet_ids" {
 
 # RDS API-FOOD
 module "api_food_rds" {
-  source            = "./modules/postgres"
-  region            = var.region
-  availability_zone = var.availability_zones[0]
-  vpc_id            = data.aws_ssm_parameter.vpc_id.value
+  source             = "./modules/postgres"
+  region             = var.region
+  availability_zone  = var.availability_zones[0]
+  vpc_id             = data.aws_ssm_parameter.vpc_id.value
   database_subnetids = split(",", data.aws_ssm_parameter.public_subnet_ids.value)
-  database_username = var.api_food_database_credentials.username
-  database_password = var.api_food_database_credentials.password
-  database_port     = var.api_food_database_credentials.port
-  database_name     = var.api_food_database_credentials.name
+  database_username  = var.api_food_database_credentials.username
+  database_password  = var.api_food_database_credentials.password
+  database_port      = var.api_food_database_credentials.port
+  database_name      = var.api_food_database_credentials.name
 }
 
 resource "aws_ssm_parameter" "rds_food_db_url" {
@@ -52,15 +52,15 @@ resource "aws_ssm_parameter" "rds_food_db_name" {
 
 # RDS API-ORDER
 module "api_order_rds" {
-  source            = "./modules/postgres"
-  region            = var.region
-  availability_zone = var.availability_zones[0]
-  vpc_id            = data.aws_ssm_parameter.vpc_id.value
+  source             = "./modules/postgres"
+  region             = var.region
+  availability_zone  = var.availability_zones[0]
+  vpc_id             = data.aws_ssm_parameter.vpc_id.value
   database_subnetids = split(",", data.aws_ssm_parameter.public_subnet_ids.value)
-  database_username = var.api_order_database_credentials.username
-  database_password = var.api_order_database_credentials.password
-  database_port     = var.api_order_database_credentials.port
-  database_name     = var.api_order_database_credentials.name
+  database_username  = var.api_order_database_credentials.username
+  database_password  = var.api_order_database_credentials.password
+  database_port      = var.api_order_database_credentials.port
+  database_name      = var.api_order_database_credentials.name
 }
 
 resource "aws_ssm_parameter" "rds_order_db_url" {

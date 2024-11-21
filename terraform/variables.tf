@@ -5,8 +5,8 @@ variable "region" {
 }
 
 variable "availability_zones" {
-  type = list(string)
-  default = ["us-east-1a", "us-east-1b"]
+  type        = list(string)
+  default     = ["us-east-1a", "us-east-1b"]
   description = "List of availability zones for the selected region"
 }
 
