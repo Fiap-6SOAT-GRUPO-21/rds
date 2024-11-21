@@ -8,8 +8,9 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.48"
     }
-
-    backend "s3" {
-    }
   }
+
+  backend "s3" {
+  }
+
 }
