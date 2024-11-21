@@ -62,9 +62,9 @@ variable "api_payments_database_credentials" {
   })
 
   default = {
-    atlas_public_key  = "guvczrbr"
-    atlas_private_key = "44180f18-6fc6-489f-8da0-c2071e2bec24"
-    org_id            = "6093f42cfe8d0c7c3aab2789"
+    atlas_public_key  = "vkawdlhg"
+    atlas_private_key = "59fc8a6b-23e4-4f84-ab5e-d472911fb7df"
+    org_id            = "60993d1464a3ec080ffc5b9a"
     cidr              = "0.0.0.0/0"
     project_name      = "tech-challenge-payments"
     cluster_name      = "api-payments-cluster"
